@@ -6,12 +6,12 @@ cum_qpi = float(cum_qpi_data[16:])
 course_list = data_lines[32:]
 source_code.close()
 
-grade_lookup = {'A' : 4.0, 'B+': 3.5, 'B' : 3, 'C+': 2.5, 'C' : 2, 'D' : 1.5, 'F' : 0}
+grade_lookup = {'A' : 4.0, 'B+': 3.5, 'B' : 3, 'C+': 2.5, 'C' : 2, 'D' : 1, 'F' : 0}
 
 # Parse Data
 academic_units_taken = 0
 grade_total = 0.0
-invalid_tags = [' PE ', 'NSTP']
+invalid_tags = [' PE', 'NSTP', 'INTAC']
 invalid_grades = ['W', 'S', 'UD']
 for course in course_list:
     if not course.startswith('20'):

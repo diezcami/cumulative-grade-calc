@@ -21,6 +21,32 @@ var grade_total = 0.0
 var invalid_tags = [' PE', 'NSTP', 'INTAC']
 var invalid_grades = ['W', 'S', 'AUD']
 
+for(course in course_list) {
+    if !(course.startsWith('20')) {
+        break;
+    }
+
+    // TODO: Filter ITM?
+    // TODO: Refactor
+    for (tag in invalid_tags) {
+        if course.contains(tag) {
+            continue;
+        }
+    }
+
+    course = course.replace(" ", "")
+    last_in = course.length - 2 // One whitespace to the right
+    units_in = 1
+
+    // TODO: Refactor
+    var len = course.length
+    for (grade in invalid_grade) {
+        if course.substring()
+    }
+
+
+}
+
 
 
 -->

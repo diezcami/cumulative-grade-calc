@@ -32,12 +32,11 @@ for course in course_list:
         units_in = 2
     
     # Parse Course Information
-    print course
     course_units = int(course[last_in - units_in])
     grade_total += (grade_lookup[course[last_in - units_in + 1 : last_in + 1]] * course_units)
     academic_units_taken += course_units
-    print grade_lookup[course[last_in - units_in + 1 : last_in + 1]]
+    # print grade_lookup[course[last_in - units_in + 1 : last_in + 1]]
 
 
 current_cumulative_qpi = grade_total / academic_units_taken
-print (current_cumulative_qpi)
+print "Calculated Cumulative QPI:", (current_cumulative_qpi)

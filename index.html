@@ -1,12 +1,43 @@
-<HTML>
-  <HEAD>
-    <SCRIPT LANGUAGE="javascript" SRC="parse.js"></script>
-  </HEAD>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/parse.js"></script>
+  </head>
 
-  <BODY>
-    <SCRIPT LANGUAGE="javascript" TYPE="text/javascript"></script>
-    <TEXTAREA ID="aisis_data">
-    </TEXTAREA>
+  <body>
+    <div class="sleepy">
+        <h1>AdMU Cumulative QPI Calculator</h1>
+        Find out the minimum grades you need to reach your goal QPI's!
+        <h3>Instructions</h3>
+        <ol>
+            <li>Login to your account on <a href="http://aisisonline.ateneo.edu" target="_blank">AISIS</a>.</li>
+            <li>Click on <strong>My Grades</strong>.</li>
+            <li>Select <strong>All Grades</strong> in the dropdown box and click on the <strong>Display Grades</strong> button.</li>
+            <li>Use <b>CTRL+A</b> to select the whole page. Copy the selected data using <b>CTRL+C</b>, and paste it on the textbox below using <b>CTRL+V</b>.
+        </ol>
 
-  </BODY>
-</HTML>
+        <div class="row">
+            <div class="col-md-4">
+            <h2>Paste your data here!</h2>
+                <form id="form">
+                    <div class="form-group">
+                        <label for="exampleTextarea">Data from "All Grades" Page</label>
+                        <textarea class="form-control" id="raw_grades_data" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-number-input">Remaining number of units (Counted towards the QPI)</label>
+                        <input class="form-control" type="number" id="number_of_units">
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="present_metadata()">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-8" id="results_metadata">
+            </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+body {
+    background: #FFF;
+}
+
+.sleepy {
+    padding: 0px 50px;
+}
+
+.post-body {
+    margin: 12px 0px;
+    padding: 10px;
+    background: #F8F8F8;
+    border-top: 5px solid #00cdcd;
+}
+
+.post-content {
+    text-align: justify;
+    height: 200px;
+    overflow-y: scroll;
+    background: #FEFEFE;
+    padding: 10px;
+    font-size: 11px;
+}
+
+.col-sm-4 {
+    background: #FFF;
+}
+
+.btn {
+    margin: 2px;
+}
